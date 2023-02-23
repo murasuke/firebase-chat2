@@ -423,6 +423,8 @@ export default ChatPage;
 
   OffscreenCanvasから画像化する場合、async関数となるため表示が面倒になります。このような場合、React.Suspenseを使うとすっきりとしたコードにすることができます。
 
+詳細は[名前表示アイコン コンポーネント(React)](https://qiita.com/murasuke/items/b2113d6778834b04cf49) 参照
+
 * Canvasの場合
 
   非同期処理が不要なため<img>のsrcに直接埋め込むことができます
