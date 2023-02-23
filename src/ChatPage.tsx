@@ -50,12 +50,13 @@ const formatHHMM = (time: Date) => {
  * ・自分の入力を右側、他の人は左側に表示
  */
 const ChatPage: React.FC = () => {
-  // /chat/:room urlのパラメータ(チャットルーム名)
-  const { room } = useParams<{ room: string }>();
   const [chatLogs, setChatLogs] = useState<ChatLog[]>([]);
   const [inputMsg, setInputMsg] = useState('');
 
   const userName = useMemo(() => getUName(), []);
+
+  // /chat/:room urlのパラメータ(チャットルーム名)
+  const { room } = useParams<{ room: string }>();
   const messagesRef = useMemo(
     () => collection(db, 'chatroom', room, 'messages'),
     [room]
